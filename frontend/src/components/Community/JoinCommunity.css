@@ -3,9 +3,16 @@
   padding: 25px;
   border-radius: 15px;
   margin: 30px 0;
-  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  transition: 0.3s ease;
 }
 
+.join-community:hover {
+  box-shadow: 0 7px 18px rgba(46, 125, 50, 0.15);
+}
+
+
+/* Heading */
 
 .join-community h2 {
   text-align: center;
@@ -14,6 +21,8 @@
 }
 
 
+/* Form */
+
 .join-community form {
   display: flex;
   flex-direction: column;
@@ -21,55 +30,138 @@
 }
 
 
+/* Inputs */
+
 .join-community input,
 .join-community select {
-
   padding: 12px;
-
   border: 1px solid #ccc;
-
   border-radius: 8px;
-
   font-size: 15px;
-
+  width: 100%;
+  box-sizing: border-box;
+  transition: 0.3s ease;
 }
-
 
 .join-community input:focus,
 .join-community select:focus {
-
   outline: none;
-
   border-color: #4caf50;
-
+  box-shadow: 0 0 0 3px rgba(76, 175, 80, 0.12);
 }
 
 
+/* ALL BUTTONS */
 
 .join-community button {
-
-  background: #4caf50;
-
-  color: white;
-
+  display: block;
+  width: 100%;
+  box-sizing: border-box;
   border: none;
-
-  padding: 12px;
-
-  border-radius: 8px;
-
+  padding: 13px 16px;
+  border-radius: 9px;
   cursor: pointer;
-
   font-size: 16px;
-
-  transition: 0.3s;
-
+  font-weight: 600;
+  transition: all 0.25s ease;
 }
 
 
+/* Main Join Community Button */
 
-.join-community button:hover {
+.join-community .join-community-button {
+  background: #4caf50;
+  color: white;
+  margin-top: 10px;
+}
 
+.join-community .join-community-button:hover {
   background: #388e3c;
+  transform: translateY(-2px);
+  box-shadow: 0 5px 12px rgba(76, 175, 80, 0.25);
+}
 
+
+/* Joined Community */
+
+.join-community .joined-button {
+  background: #e8f5e9;
+  color: #2e7d32;
+  border: 1px solid #a5d6a7;
+  cursor: default;
+  margin-top: 10px;
+}
+
+.join-community .joined-button:hover {
+  background: #e8f5e9;
+  transform: none;
+  box-shadow: none;
+}
+
+
+/*
+   IMPORTANT:
+   Joined Community ke neeche
+   Join Community button
+*/
+
+.join-community .joined-button + .join-community-button {
+  margin-top: 12px;
+}
+
+
+/* Form Join Now */
+
+.join-community form button[type="submit"] {
+  background: #4caf50;
+  color: white;
+  margin-top: 5px;
+}
+
+.join-community form button[type="submit"]:hover {
+  background: #388e3c;
+  transform: translateY(-2px);
+  box-shadow: 0 5px 12px rgba(76, 175, 80, 0.25);
+}
+
+
+/* Success / Error Message */
+
+.community-message {
+  background: #e8f5e9;
+  color: #2e7d32;
+  padding: 12px 15px;
+  border-radius: 9px;
+  margin-bottom: 15px;
+  text-align: center;
+  font-size: 14px;
+  font-weight: 500;
+  border: 1px solid #c8e6c9;
+}
+
+
+/* File Upload */
+
+.join-community input[type="file"] {
+  background: white;
+  cursor: pointer;
+}
+
+
+/* Mobile */
+
+@media (max-width: 600px) {
+
+  .join-community {
+    padding: 20px;
+    margin: 20px 0;
+  }
+
+  .join-community h2 {
+    font-size: 24px;
+  }
+
+  .join-community button {
+    font-size: 15px;
+  }
 }

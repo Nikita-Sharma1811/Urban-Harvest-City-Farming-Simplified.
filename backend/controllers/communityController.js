@@ -1,5 +1,5 @@
-const Community = require("../models/Community");
 
+const Community = require("../models/Community");
 
 // ===============================
 // JOIN COMMUNITY
@@ -16,16 +16,29 @@ exports.joinCommunity = async (req, res) => {
     console.log("=================================");
 
 
+    // Check existing email first
+    const existingMember = await Community.findOne({
+      email: req.body.email
+    });
+
+    if (existingMember) {
+
+      console.log("ALREADY A MEMBER");
+
+      return res.status(400).json({
+        message: "ℹ️ You are already a member of the community."
+      });
+
+    }
+
+
+    // Create new member
     const member = new Community({
 
       name: req.body.name,
-
       email: req.body.email,
-
       city: req.body.city,
-
       gardenType: req.body.gardenType,
-
       experience: req.body.experience,
 
       image: req.file
@@ -35,18 +48,15 @@ exports.joinCommunity = async (req, res) => {
     });
 
 
-    console.log("SAVING MEMBER:", member);
-
-
     await member.save();
 
 
-    console.log("MEMBER SAVED SUCCESSFULLY:", member);
+    console.log("MEMBER SAVED SUCCESSFULLY");
 
 
-    res.status(201).json({
+    return res.status(201).json({
 
-      message: "Community member added successfully",
+      message: "🌱 Successfully joined the community.",
 
       member: member
 
@@ -54,24 +64,42 @@ exports.joinCommunity = async (req, res) => {
 
   }
 
+
   catch (err) {
 
-    console.log("=================================");
-    console.log("COMMUNITY ERROR:", err);
-    console.log("=================================");
+    // IMPORTANT:
+    // Never send MongoDB E11000 error to frontend
+
+    if (err && err.code === 11000) {
+
+      console.log("DUPLICATE EMAIL");
+
+      return res.status(400).json({
+
+        message:
+          "ℹ️ You are already a member of the community."
+
+      });
+
+    }
 
 
-    res.status(500).json({
+    console.log(
+      "COMMUNITY ERROR:",
+      err.message
+    );
 
-      message: err.message
+
+    return res.status(500).json({
+
+      message:
+        "Failed to join community. Please try again."
 
     });
 
   }
 
 };
-
-
 
 
 // ===============================
@@ -84,13 +112,7 @@ exports.getMembers = async (req, res) => {
 
     const members = await Community.find();
 
-    console.log(
-      "COMMUNITY MEMBERS:",
-      members
-    );
-
-
-    res.status(200).json(members);
+    return res.status(200).json(members);
 
   }
 
@@ -98,16 +120,17 @@ exports.getMembers = async (req, res) => {
 
     console.log(
       "GET MEMBERS ERROR:",
-      err
+      err.message
     );
 
+    return res.status(500).json({
 
-    res.status(500).json({
-
-      message: err.message
+      message:
+        "Failed to fetch community members."
 
     });
 
   }
 
 };
+
