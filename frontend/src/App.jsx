@@ -2,16 +2,16 @@ import { Routes, Route } from "react-router-dom";
 import "./App.css";
 
 // Pages
-import Home from "./pages/Home/Home";
-import Gallery from "./pages/Gallery/Gallery";
-import Tutorials from "./pages/Tutorials/Tutorials";
-import GrowSmart from "./pages/GrowSmart/GrowSmart";
-import Community from "./pages/Community/Community";
-import Login from "./pages/Login/Login";
-import Signup from "./pages/Signup/Signup";
-import Profile from "./pages/Profile/Profile";
-import CropDetails from "./pages/CropDetails/CropDetails";
-import NotFound from "./pages/NotFound/NotFound";
+import Home from "./Pages/Home/Home";
+import Gallery from "./Pages/Gallery/Gallery";
+import Tutorials from "./Pages/Tutorials/Tutorials";
+import GrowSmart from "./Pages/GrowSmart/GrowSmart";
+import Community from "./Pages/Community/Community";
+import Login from "./Pages/Login/Login";
+import Signup from "./Pages/Signup/Signup";
+import Profile from "./Pages/Profile/Profile";
+import CropDetails from "./Pages/CropDetails/CropDetails";
+import NotFound from "./Pages/NotFound/NotFound";
 
 
 function App() {
