@@ -1,0 +1,129 @@
+.community-page{
+    background:#f5f8f5;
+    min-height:100vh;
+    padding:40px 0;
+}
+
+/* ---------- CREATE POST ---------- */
+
+.create-post{
+    background:#fff;
+    padding:25px;
+    border-radius:18px;
+    box-shadow:0 6px 20px rgba(0,0,0,.08);
+    margin-bottom:35px;
+}
+
+.create-post-header{
+    display:flex;
+    align-items:center;
+    gap:15px;
+    margin-bottom:20px;
+}
+
+.avatar{
+    width:60px;
+    height:60px;
+    border-radius:50%;
+    object-fit:cover;
+    border:3px solid #4CAF50;
+}
+
+.create-post input[type=text]{
+    flex:1;
+    padding:12px;
+    border-radius:10px;
+    border:1px solid #ddd;
+    font-size:16px;
+}
+
+.create-post textarea{
+    width:100%;
+    min-height:120px;
+    padding:15px;
+    margin:15px 0;
+    resize:none;
+    border-radius:10px;
+    border:1px solid #ddd;
+    font-size:16px;
+}
+
+.create-post select,
+.create-post input[type=file]{
+    width:100%;
+    padding:12px;
+    margin-bottom:15px;
+    border-radius:10px;
+    border:1px solid #ddd;
+}
+
+.create-post button{
+    width:100%;
+}
+
+/* ---------- POST CARD ---------- */
+
+.post-card{
+    background:#fff;
+    border-radius:18px;
+    padding:20px;
+    margin:25px 0;
+    box-shadow:0 6px 20px rgba(0,0,0,.08);
+}
+
+.post-header{
+    display:flex;
+    align-items:center;
+    gap:15px;
+}
+
+.post-header h3{
+    margin:0;
+}
+
+.post-header small{
+    color:gray;
+}
+
+.caption{
+    margin:20px 0;
+    line-height:1.6;
+}
+
+.category{
+    display:inline-block;
+    background:#E8F5E9;
+    color:#2E7D32;
+    padding:6px 12px;
+    border-radius:20px;
+    margin-bottom:15px;
+}
+
+.post-image{
+    width:100%;
+    border-radius:15px;
+    margin-top:15px;
+    max-height:500px;
+    object-fit:cover;
+}
+
+.post-actions{
+    display:flex;
+    justify-content:space-around;
+    margin-top:20px;
+    border-top:1px solid #eee;
+    padding-top:15px;
+}
+
+.post-actions button{
+    border:none;
+    background:none;
+    cursor:pointer;
+    font-size:16px;
+    transition:.3s;
+}
+
+.post-actions button:hover{
+    color:#4CAF50;
+    transform:scale(1.05);
+}

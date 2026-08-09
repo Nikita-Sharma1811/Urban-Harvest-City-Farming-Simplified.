@@ -1,0 +1,75 @@
+.join-community {
+  background: #f4fff4;
+  padding: 25px;
+  border-radius: 15px;
+  margin: 30px 0;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+}
+
+
+.join-community h2 {
+  text-align: center;
+  color: #2e7d32;
+  margin-bottom: 20px;
+}
+
+
+.join-community form {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+
+.join-community input,
+.join-community select {
+
+  padding: 12px;
+
+  border: 1px solid #ccc;
+
+  border-radius: 8px;
+
+  font-size: 15px;
+
+}
+
+
+.join-community input:focus,
+.join-community select:focus {
+
+  outline: none;
+
+  border-color: #4caf50;
+
+}
+
+
+
+.join-community button {
+
+  background: #4caf50;
+
+  color: white;
+
+  border: none;
+
+  padding: 12px;
+
+  border-radius: 8px;
+
+  cursor: pointer;
+
+  font-size: 16px;
+
+  transition: 0.3s;
+
+}
+
+
+
+.join-community button:hover {
+
+  background: #388e3c;
+
+}

@@ -1,0 +1,146 @@
+/* ============================= */
+/* GrowSmart Form */
+/* ============================= */
+
+.growsmart-form {
+  width: 100%;
+  max-width: 600px;
+  margin: 30px auto;
+
+  display: flex;
+  flex-direction: column;
+
+  gap: 18px;
+}
+
+
+/* Input fields */
+
+.growsmart-form input,
+.growsmart-form select {
+
+  width: 100%;
+
+  padding: 14px 16px;
+
+  box-sizing: border-box;
+
+  border: 1px solid #ccc;
+
+  border-radius: 8px;
+
+  font-size: 16px;
+
+  outline: none;
+
+}
+
+
+/* Focus */
+
+.growsmart-form input:focus,
+.growsmart-form select:focus {
+
+  border-color: #4caf50;
+
+}
+
+
+/* Buttons */
+
+.growsmart-buttons {
+
+  width: 100%;
+
+  display: flex;
+
+  gap: 15px;
+
+  margin-top: 5px;
+
+}
+
+
+.growsmart-buttons button {
+
+  flex: 1;
+
+  padding: 13px;
+
+  border: none;
+
+  border-radius: 8px;
+
+  cursor: pointer;
+
+  font-size: 16px;
+
+}
+
+
+/* Recommended Crops */
+
+.recommended-crops {
+
+  margin-top: 45px;
+
+  text-align: center;
+
+}
+
+
+.recommended-crops h2 {
+
+  margin-bottom: 25px;
+
+}
+
+
+.crops-grid {
+
+  display: grid;
+
+  grid-template-columns: repeat(
+    auto-fit,
+    minmax(180px, 1fr)
+  );
+
+  gap: 18px;
+
+}
+
+
+.crop-card {
+
+  padding: 20px;
+
+  border-radius: 12px;
+
+  background: #f5f8f2;
+
+  border: 1px solid #dce8d8;
+
+  font-size: 17px;
+
+  font-weight: 500;
+
+}
+
+
+/* Mobile */
+
+@media (max-width: 600px) {
+
+  .growsmart-form {
+
+    width: 90%;
+
+  }
+
+  .growsmart-buttons {
+
+    flex-direction: column;
+
+  }
+
+}

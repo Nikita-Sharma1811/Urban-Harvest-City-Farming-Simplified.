@@ -1,0 +1,571 @@
+/* ==========================
+   Urban Harvest App Styling
+========================== */
+
+
+.app {
+  min-height: 100vh;
+  background: #f6fff4;
+  display: flex;
+  flex-direction: column;
+}
+
+
+/* ==========================
+   Common Layout
+========================== */
+
+.section {
+  padding: 80px 0;
+}
+
+
+.container {
+  width: 90%;
+  max-width: 1280px;
+  margin: auto;
+}
+
+
+.heading {
+  font-size: 2.7rem;
+  color: #1b5e20;
+  text-align: center;
+  font-weight: 700;
+  margin-bottom: 15px;
+}
+
+
+.sub-heading {
+  text-align: center;
+  color: #666;
+  max-width: 700px;
+  margin: 0 auto 50px;
+  line-height: 1.7;
+}
+
+
+
+/* ==========================
+   Buttons
+========================== */
+
+
+.primary-btn {
+
+  background: #2e7d32;
+  color: white;
+
+  padding: 14px 30px;
+
+  border-radius: 12px;
+
+  display: inline-block;
+
+  transition: 0.3s;
+
+}
+
+
+.primary-btn:hover {
+
+  background: #1b5e20;
+
+}
+
+
+
+.secondary-btn {
+
+  background: transparent;
+
+  color: #2e7d32;
+
+  border: 2px solid #2e7d32;
+
+  padding: 14px 30px;
+
+  border-radius: 12px;
+
+}
+
+
+.secondary-btn:hover {
+
+  background:#2e7d32;
+
+  color:white;
+
+}
+
+
+
+/* ==========================
+   Grid
+========================== */
+
+
+.grid-2 {
+
+  display:grid;
+
+  grid-template-columns:repeat(2,1fr);
+
+  gap:35px;
+
+}
+
+
+.grid-3 {
+
+  display:grid;
+
+  grid-template-columns:repeat(3,1fr);
+
+  gap:30px;
+
+}
+
+
+
+.grid-4 {
+
+  display:grid;
+
+  grid-template-columns:repeat(4,1fr);
+
+  gap:25px;
+
+}
+
+
+
+/* ==========================
+   Home Page
+========================== */
+
+
+.home-feature {
+
+  background:white;
+
+}
+
+
+
+.home-crops {
+
+  background:#f1faee;
+
+}
+
+
+
+/* ==========================
+   Gallery Page
+========================== */
+
+
+.gallery-page {
+
+  background:#ffffff;
+
+}
+
+
+
+/* ==========================
+   Tutorials Page
+========================== */
+
+
+.tutorials-page {
+
+  background:#f6fff4;
+
+}
+
+
+
+/* ==========================
+   GrowSmart Page
+========================== */
+
+
+.growsmart-page {
+
+  background:#ffffff;
+
+}
+
+
+
+.growsmart-form {
+
+
+  max-width:600px;
+
+  margin:auto;
+
+  background:white;
+
+  padding:40px;
+
+  border-radius:15px;
+
+  box-shadow:0 10px 30px rgba(0,0,0,0.08);
+
+
+}
+
+
+
+.growsmart-form input,
+.growsmart-form select,
+.community-form input,
+.community-form select,
+.auth-form input {
+
+
+  width:100%;
+
+  padding:14px;
+
+  margin-bottom:18px;
+
+  border:1px solid #ddd;
+
+  border-radius:10px;
+
+  outline:none;
+
+}
+
+
+
+.form-buttons {
+
+  display:flex;
+
+  gap:20px;
+
+}
+
+
+
+/* ==========================
+   Community Page
+========================== */
+
+
+.community-page {
+
+  background:#f1faee;
+
+}
+
+
+
+.community-form {
+
+
+  max-width:600px;
+
+  margin:0 auto 60px;
+
+  background:white;
+
+  padding:40px;
+
+  border-radius:15px;
+
+  box-shadow:0 10px 30px rgba(0,0,0,0.08);
+
+}
+
+
+
+
+.community-members {
+
+  margin-top:50px;
+
+}
+
+
+
+/* ==========================
+   Authentication Pages
+========================== */
+
+
+.auth-page {
+
+  min-height:70vh;
+
+  display:flex;
+
+  align-items:center;
+
+}
+
+
+
+.auth-container {
+
+
+  max-width:500px;
+
+  margin:auto;
+
+
+}
+
+
+
+.auth-form {
+
+
+  background:white;
+
+  padding:40px;
+
+  border-radius:15px;
+
+  box-shadow:0 10px 30px rgba(0,0,0,0.08);
+
+}
+
+
+
+.auth-text {
+
+  text-align:center;
+
+  margin-top:20px;
+
+}
+
+
+
+.auth-text a {
+
+  color:#2e7d32;
+
+  font-weight:600;
+
+  margin-left:5px;
+
+}
+
+
+
+/* ==========================
+   Profile Page
+========================== */
+
+
+.profile-page {
+
+  background:#ffffff;
+
+}
+
+
+
+.profile-card {
+
+
+  max-width:600px;
+
+  margin:auto;
+
+  background:white;
+
+  padding:40px;
+
+  border-radius:15px;
+
+  box-shadow:0 10px 30px rgba(0,0,0,0.08);
+
+  text-align:center;
+
+
+}
+
+
+
+.profile-image {
+
+  font-size:70px;
+
+  margin-bottom:20px;
+
+}
+
+
+
+.profile-details p {
+
+  margin:12px 0;
+
+  color:#555;
+
+}
+
+
+
+/* ==========================
+   Crop Details
+========================== */
+
+
+.crop-details-card {
+
+
+  display:grid;
+
+  grid-template-columns:1fr 1fr;
+
+  gap:40px;
+
+  background:white;
+
+  padding:40px;
+
+  border-radius:15px;
+
+  box-shadow:0 10px 30px rgba(0,0,0,0.08);
+
+
+}
+
+
+
+.crop-details-image img {
+
+
+  border-radius:15px;
+
+}
+
+
+
+.crop-details-content h1 {
+
+
+  color:#1b5e20;
+
+  margin-bottom:20px;
+
+}
+
+
+
+/* ==========================
+   404 Page
+========================== */
+
+
+.not-found-page {
+
+
+  min-height:70vh;
+
+  display:flex;
+
+  align-items:center;
+
+  text-align:center;
+
+}
+
+
+
+.not-found-container h1 {
+
+
+  font-size:100px;
+
+  color:#2e7d32;
+
+
+}
+
+
+
+.not-found-container h2 {
+
+
+  color:#1b5e20;
+
+  margin-bottom:15px;
+
+}
+
+
+
+
+/* ==========================
+   Responsive
+========================== */
+
+
+@media(max-width:992px){
+
+
+.grid-4,
+.grid-3{
+
+grid-template-columns:repeat(2,1fr);
+
+}
+
+
+.crop-details-card{
+
+grid-template-columns:1fr;
+
+}
+
+
+}
+
+
+
+@media(max-width:768px){
+
+
+.grid-2,
+.grid-3,
+.grid-4{
+
+grid-template-columns:1fr;
+
+}
+
+
+
+.heading{
+
+font-size:2rem;
+
+}
+
+
+.form-buttons{
+
+flex-direction:column;
+
+}
+
+
+
+.section{
+
+padding:60px 0;
+
+}
+
+
+}
